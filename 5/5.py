@@ -52,12 +52,13 @@ for i in range(len(move_list)):
         #print(key, value)
 
     for j in range(move_list[i]):
-        lift_item = stacks[from_list[i]].pop()
-        temp_stack.append(lift_item)
-    for k in range(len(temp_stack)):
-        drop_item = temp_stack.pop()
-        stacks[to_list[i]].append(drop_item)
+        pop_item = stacks[from_list[i]].pop()
+        stacks[to_list[i]].append(pop_item)
 
 for key, value in stacks.items():
     print(key, value[-1])
+
+
+
+
 
